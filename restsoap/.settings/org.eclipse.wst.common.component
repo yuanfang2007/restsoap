@@ -2,8 +2,12 @@
     <wb-module deploy-name="restsoap">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <dependent-module archiveName="restsoapclient-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/restsoapclient/restsoapclient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="restsoap"/>
         <property name="java-output-path" value="/restsoap/target/classes"/>
     </wb-module>

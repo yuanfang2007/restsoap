@@ -24,21 +24,38 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>exec-maven-plugin</artifactId>
+				<groupId>org.codehaus.mojo</groupId>
+				<version>${exec-maven-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+			
 		</plugins>
 	</build>
+	
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-<!--     <dependency>
 	  <groupId>com.restsoap</groupId>
 	  <artifactId>restsoapclient</artifactId>
 	  <version>0.0.1-SNAPSHOT</version>
-	</dependency> -->
-
+	</dependency>
+	<!-- http://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>6.9.10</version>
+	</dependency>
+		
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
     	<groupId>asm</groupId>
     	<artifactId>asm</artifactId>
@@ -52,7 +69,7 @@
 	<dependency>
 		<groupId>org.json</groupId>
 		<artifactId>json</artifactId>
-		<version>20140107</version>
+		<version>20160212</version>
 	</dependency>
 	<dependency>
 		<groupId>com.sun.jersey</groupId>
@@ -94,10 +111,15 @@
 		<version>3.0.1</version>
 		<scope>provided</scope>
 	</dependency>
-	<dependency>
+		<dependency>
 		<groupId>javax.inject</groupId>
 		<artifactId>javax.inject</artifactId>
 		<version>1</version>
+	</dependency>
+			<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-servlet</artifactId>
+			<version>4.0</version>
 	</dependency>
   </dependencies>
 </project>
